@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notes Keeper</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div id="loginPage">
+    <h2>📝 Notes Keeper</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- APP -->
+  <div id="appPage" class="hidden">
+    <h2>📒 My Notes</h2>
+
+    <input type="text" id="search" placeholder="🔍 Search notes..." onkeyup="searchNotes()">
+
+    <input type="text" id="noteTitle" placeholder="Title">
+    <textarea id="noteContent" placeholder="Write your note..."></textarea>
+
+    <button onclick="addNote()">Add Note</button>
+
+    <div id="notesContainer"></div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
